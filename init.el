@@ -104,4 +104,9 @@
 (setq org-agenda-files '("~/gtd"))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+(global-auto-revert-mode t)
 
+(abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+					    ("2chz" "caihaozhong")
+					    ))
