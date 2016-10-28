@@ -14,7 +14,7 @@
 ( defvar emacs-cjk-font "微软雅黑"
   "The font name for CJK." )
 
-( defvar emacs-font-size-pair ' ( 15 . 16 )
+( defvar emacs-font-size-pair ' ( 16 . 15 )
    "Default font size pair for (english . chinese)" )
 
 ( defvar emacs-font-size-pair-list
@@ -53,7 +53,7 @@
 
 (defun open-init-file()
   (interactive)
-  (find-file "D:/Install/emacs-25.1-i686-w64-mingw32/config/.emacs.d/init.el"))
+  (find-file "~/.emacs.d/init.el"))
 
 (global-set-key (kbd "<f4>") 'open-init-file)
 
@@ -80,12 +80,12 @@
  '(package-selected-packages
    (quote
     (evil-smartparens swiper-helm company hungry-delete swiper counsel smartparens exec-path-from-shell))))
-(custom-set-faces
+;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-table ((t (:foreground "#6c71c4" :family "Ubuntu Mono")))))
+;; '(org-table ((t (:foreground "#6c71c4" :family "Ubuntu Mono")))))
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (global-set-key "\C-s" 'swiper)
@@ -110,3 +110,18 @@
 (define-abbrev-table 'global-abbrev-table '(
 					    ("2chz" "caihaozhong")
 					    ))
+(put 'dired-find-alternate-file 'disabled nil)
+
+(defvar today (format-time-string "%Y.%m.%d"))
+(defvar path "e:/CG/Drape")
+(defun new-week-report()
+  (interactive)
+  (find-file )
+  )
+
+;;(require 'cl)
+
+
+
+(get-universal-tile)
+
