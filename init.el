@@ -77,6 +77,7 @@
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.08)
  '(company-minimum-prefix-length 1)
+ '(org-footnote-define-inline nil)
  '(package-selected-packages
    (quote
     (evil-smartparens swiper-helm company hungry-delete swiper counsel smartparens exec-path-from-shell))))
@@ -112,16 +113,24 @@
 					    ))
 (put 'dired-find-alternate-file 'disabled nil)
 
-(defvar today (format-time-string "%Y.%m.%d"))
-(defvar path "e:/CG/Drape")
+;;打开一篇新的周记
+(defconst today (format-time-string "%Y.%m.%d"))
+(defconst mpath "e://CG//周记//")
 (defun new-week-report()
   (interactive)
-  (find-file )
+  (find-file (format "%s周记%s//周记.org" mpath today ))
   )
 
-;;(require 'cl)
 
 
 
-(get-universal-tile)
 
+
+
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
